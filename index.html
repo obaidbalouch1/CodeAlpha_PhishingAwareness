@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Phishing Awareness Training</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <div id="page-transition"></div>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">🔒 PhishGuard</div>
+      <div class="nav-links">
+        <a href="#mod1">Types</a>
+        <a href="#mod2">Recognize</a>
+        <a href="#mod3">Tactics</a>
+        <a href="#mod4">Lifecycle</a>
+        <a href="#mod5">Defense</a>
+        <a href="#mod6">Quiz</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> Live Security Training
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Phishing</span>
+        <span class="title-line accent">Awareness</span>
+        <span class="title-line">Training</span>
+      </h1>
+      <p class="hero-sub">Every 11 seconds a business falls victim to a phishing attack. Learn to recognize, avoid, and report threats before they reach you.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">91%</div>
+          <div class="stat-label">of breaches start with phishing</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$4.9B</div>
+          <div class="stat-label">lost to phishing in 2023</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3.4B</div>
+          <div class="stat-label">phishing emails sent daily</div>
+        </div>
+      </div>
+      <a href="#mod1" class="btn-hero">
+        <span>Begin Training</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- STICKY PROGRESS -->
+  <div class="progress-bar-wrap" id="progressWrap">
+    <div class="progress-bar-inner" id="progressBar"></div>
+    <div class="progress-label" id="progressLabel">0% complete</div>
+  </div>
+
+  <main id="modules">
+
+    <!-- ══════════════════ MODULE 1: Types ══════════════════ -->
+    <section class="module reveal" id="mod1">
+      <div class="section-label">Module 01</div>
+      <h2 class="section-title">What Is Phishing?</h2>
+      <p class="section-intro">Phishing is a <strong>social engineering cyberattack</strong> where criminals impersonate trusted entities — banks, colleagues, government agencies — to trick victims into revealing sensitive data or installing malware. It remains the #1 attack vector worldwide because it exploits human psychology, not just technology.</p>
+
+      <!-- 3D flip cards -->
+      <div class="flip-grid">
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">📧</div>
+              <h3>Email Phishing</h3>
+              <p>Mass-sent fraudulent emails</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Email Phishing</h3>
+              <ul>
+                <li>Most common form — billions sent daily</li>
+                <li>Mimics banks, delivery services, HR</li>
+                <li>Goal: steal credentials or install malware</li>
+                <li>Often uses lookalike domains</li>
+                <li>May include malicious attachments</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">🎯</div>
+              <h3>Spear Phishing</h3>
+              <p>Highly targeted personal attacks</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Spear Phishing</h3>
+              <ul>
+                <li>Uses your name, role, company</li>
+                <li>Researched via LinkedIn/social media</li>
+                <li>Success rate up to 70% vs 3% for bulk</li>
+                <li>Often targets executives (whaling)</li>
+                <li>Hardest to detect — very convincing</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">📱</div>
+              <h3>Smishing</h3>
+              <p>SMS & messaging attacks</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Smishing (SMS Phishing)</h3>
+              <ul>
+                <li>Fake texts about packages, banks, prizes</li>
+                <li>Links lead to credential-harvesting sites</li>
+                <li>People click SMS links 8× more than email</li>
+                <li>Can also spread via WhatsApp, Telegram</li>
+                <li>Difficult to verify sender on mobile</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">📞</div>
+              <h3>Vishing</h3>
+              <p>Voice call deception</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Vishing (Voice Phishing)</h3>
+              <ul>
+                <li>Caller ID spoofing makes it look real</li>
+                <li>Impersonates IRS, tech support, banks</li>
+                <li>AI voice cloning now used by attackers</li>
+                <li>Creates urgency to act immediately</li>
+                <li>Always call back on official numbers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">🐋</div>
+              <h3>Whaling</h3>
+              <p>CEO & executive targeting</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Whaling</h3>
+              <ul>
+                <li>Targets C-suite, directors, board members</li>
+                <li>Impersonates auditors, lawyers, regulators</li>
+                <li>Average loss per incident: $47,000+</li>
+                <li>Uses business email compromise (BEC)</li>
+                <li>May request wire transfers or W-2 data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-icon">🌐</div>
+              <h3>Pharming</h3>
+              <p>DNS hijacking redirects</p>
+              <div class="flip-hint">Hover to learn more</div>
+            </div>
+            <div class="flip-back">
+              <h3>Pharming</h3>
+              <ul>
+                <li>Redirects real URLs to fake sites</li>
+                <li>Manipulates DNS settings or hosts file</li>
+                <li>No suspicious email needed</li>
+                <li>HTTPS can still appear on fake site</li>
+                <li>Requires compromised router or malware</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODULE 2: Recognize ══════════════════ -->
+    <section class="module mod-dark reveal" id="mod2">
+      <div class="section-label">Module 02</div>
+      <h2 class="section-title light">Recognizing Phishing Emails &amp; Fake Websites</h2>
+
+      <div class="recognize-grid">
+        <!-- Annotated Email -->
+        <div class="annotated-email reveal-left">
+          <div class="ae-title">⚠️ Real Phishing Email — Annotated</div>
+          <div class="ae-box">
+            <div class="ae-row">
+              <span class="ae-label">From:</span>
+              <span class="ae-val danger-text">security@paypa1-alerts.com
+                <span class="ae-tooltip">⚠ Fake domain — 'paypa1' not 'paypal'</span>
+              </span>
+            </div>
+            <div class="ae-row">
+              <span class="ae-label">To:</span>
+              <span class="ae-val">Dear Customer
+                <span class="ae-tooltip">⚠ Generic greeting — no name used</span>
+              </span>
+            </div>
+            <div class="ae-row">
+              <span class="ae-label">Subject:</span>
+              <span class="ae-val danger-text">⚠️ URGENT: Your account will be suspended!
+                <span class="ae-tooltip">⚠ Fear-based urgency tactic</span>
+              </span>
+            </div>
+            <div class="ae-body">
+              <p>Dear Customer,</p>
+              <p>We have detected <span class="highlight-danger">unusual sign-in activity<span class="ae-tooltip">⚠ Vague threat, no specifics</span></span> on your PayPal account. To avoid permanent suspension, you must verify your identity within <span class="highlight-danger">24 hours<span class="ae-tooltip">⚠ Artificial deadline creates panic</span></span>.</p>
+              <p>Please click the link below to confirm your account:</p>
+              <p><span class="fake-link-annotated">http://paypal-secure-verify.login-now.ru/confirm<span class="ae-tooltip">⚠ .ru domain, not paypal.com</span></span></p>
+              <p>Failure to verify will result in <span class="highlight-danger">permanent account closure and fund withholding.<span class="ae-tooltip">⚠ Threat of loss — pressure tactic</span></span></p>
+              <p>Regards,<br>PayPal Security Team<span class="ae-tooltip">⚠ No contact info, no real signature</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Red flags checklist -->
+        <div class="flags-panel reveal-right">
+          <h3 class="panel-title">🚩 Email Red Flags</h3>
+          <div class="flag-items">
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Mismatched sender domain</strong><p>hover over the From address — does it match the real company?</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Generic salutation</strong><p>"Dear Customer" instead of your actual name</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Urgency &amp; threats</strong><p>"Act now or your account will be deleted within 24 hours"</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Suspicious hyperlinks</strong><p>Link text says one thing, actual URL goes elsewhere</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Unexpected attachments</strong><p>.exe, .zip, .docm, .js files you didn't ask for</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Grammar &amp; spelling errors</strong><p>Legitimate companies proofread their communications</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Password/payment requests</strong><p>No real company asks for credentials via email</p></div></div>
+            <div class="flag-item"><span class="flag-x">✗</span><div><strong>Too good to be true</strong><p>"You've won $500!" or "Claim your free iPhone"</p></div></div>
+          </div>
+
+          <h3 class="panel-title" style="margin-top:32px;">🌐 Fake Website Signs</h3>
+          <div class="url-compare">
+            <div class="url-row bad">
+              <span class="url-icon">❌</span>
+              <code>http://paypal.com.login.secure-verify.ru/account</code>
+            </div>
+            <div class="url-row good">
+              <span class="url-icon">✅</span>
+              <code>https://www.paypal.com/signin</code>
+            </div>
+            <div class="url-row bad">
+              <span class="url-icon">❌</span>
+              <code>https://arnazon.com/deals</code>
+            </div>
+            <div class="url-row good">
+              <span class="url-icon">✅</span>
+              <code>https://www.amazon.com/deals</code>
+            </div>
+          </div>
+          <ul class="checklist-small">
+            <li>Always check the domain after <strong>https://</strong> — ignore subdomains before it</li>
+            <li>Padlock ≠ safe. Attackers can get free SSL certificates too</li>
+            <li>Look for typosquatting: arnazon, g00gle, paypa1</li>
+            <li>Missing About/Contact pages or broken layouts</li>
+            <li>Login forms asking for SSN, PIN, or security questions unusually</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODULE 3: Social Engineering ══════════════════ -->
+    <section class="module reveal" id="mod3">
+      <div class="section-label">Module 03</div>
+      <h2 class="section-title">Social Engineering Tactics</h2>
+      <p class="section-intro">Attackers don't just hack computers — they hack minds. These are the psychological levers they pull to bypass your critical thinking.</p>
+
+      <div class="tactics-3d-grid">
+        <div class="tactic-3d reveal-up" style="--delay:0s">
+          <div class="t3d-icon">😨</div>
+          <div class="t3d-content">
+            <h3>Fear &amp; Urgency</h3>
+            <p>"Your account will be permanently deleted in 24 hours." Panic short-circuits rational thinking. When stressed, people skip verification steps and act impulsively — exactly what attackers count on.</p>
+            <div class="t3d-example">"IRS Notice: You owe $3,200. Immediate payment required to avoid arrest."</div>
+          </div>
+        </div>
+        <div class="tactic-3d reveal-up" style="--delay:0.1s">
+          <div class="t3d-icon">🎁</div>
+          <div class="t3d-content">
+            <h3>Greed &amp; Reward</h3>
+            <p>Promises of free prizes, gift cards, or exclusive deals trigger excitement that overrides skepticism. The desire for gain is one of the oldest manipulation tools in existence.</p>
+            <div class="t3d-example">"Congratulations! You've been selected for a $500 Amazon reward. Claim within 1 hour."</div>
+          </div>
+        </div>
+        <div class="tactic-3d reveal-up" style="--delay:0.2s">
+          <div class="t3d-icon">👔</div>
+          <div class="t3d-content">
+            <h3>Authority</h3>
+            <p>Impersonating the CEO, IT department, IRS, or law enforcement creates a power imbalance. People are conditioned to comply with authority — attackers exploit this deeply ingrained behavior.</p>
+            <div class="t3d-example">"Hi, this is John from IT. I need your login credentials to fix a critical server issue."</div>
+          </div>
+        </div>
+        <div class="tactic-3d reveal-up" style="--delay:0.3s">
+          <div class="t3d-icon">❤️</div>
+          <div class="t3d-content">
+            <h3>Trust &amp; Familiarity</h3>
+            <p>Using your name, your manager's name, your company logo — all researched from LinkedIn or social media — makes the attack feel personal and legitimate, lowering your guard significantly.</p>
+            <div class="t3d-example">"Hey [Your Name], Sarah from accounting asked me to follow up on that invoice..."</div>
+          </div>
+        </div>
+        <div class="tactic-3d reveal-up" style="--delay:0.4s">
+          <div class="t3d-icon">🤝</div>
+          <div class="t3d-content">
+            <h3>Reciprocity &amp; Helpfulness</h3>
+            <p>People naturally want to help. Attackers pose as colleagues in need or offer "helpful" resources (fake updates, tools) that actually install malware. Helping feels good — attackers weaponize that.</p>
+            <div class="t3d-example">"I'm locked out of the system for our 3pm presentation — can you reset my password?"</div>
+          </div>
+        </div>
+        <div class="tactic-3d reveal-up" style="--delay:0.5s">
+          <div class="t3d-icon">🕵️</div>
+          <div class="t3d-content">
+            <h3>Social Proof</h3>
+            <p>"Everyone at your company already did this" or "Your colleagues approved this request." Herd mentality makes targets feel like non-compliance is abnormal or suspicious of them.</p>
+            <div class="t3d-example">"All employees have already completed the mandatory security update — please do so now."</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODULE 4: Attack Lifecycle ══════════════════ -->
+    <section class="module mod-dark reveal" id="mod4">
+      <div class="section-label">Module 04</div>
+      <h2 class="section-title light">The Phishing Attack Lifecycle</h2>
+      <p class="section-intro light-text">Understanding how an attack unfolds helps you spot and stop it at every stage.</p>
+
+      <div class="timeline">
+        <div class="tl-item reveal-left">
+          <div class="tl-dot">1</div>
+          <div class="tl-content">
+            <h3>Reconnaissance</h3>
+            <p>Attacker harvests information about the target — name, email, job title, colleagues — from LinkedIn, company websites, data breaches, and social media. This takes minutes with free tools.</p>
+            <div class="tl-tag">OSINT · Social Media · Data Breaches</div>
+          </div>
+        </div>
+        <div class="tl-item reveal-right">
+          <div class="tl-dot">2</div>
+          <div class="tl-content">
+            <h3>Infrastructure Setup</h3>
+            <p>Registers lookalike domain (e.g. paypa1.com), clones the target website's UI, sets up hosting, and configures email servers with SPF/DKIM to bypass spam filters.</p>
+            <div class="tl-tag">Domain Spoofing · Web Cloning · Email Spoofing</div>
+          </div>
+        </div>
+        <div class="tl-item reveal-left">
+          <div class="tl-dot">3</div>
+          <div class="tl-content">
+            <h3>Crafting the Lure</h3>
+            <p>Creates a convincing email or message using the target's personal details, a compelling narrative (invoice, security alert, delivery), and an urgent call-to-action with a malicious link.</p>
+            <div class="tl-tag">Pretexting · Social Engineering · Urgency</div>
+          </div>
+        </div>
+        <div class="tl-item reveal-right">
+          <div class="tl-dot">4</div>
+          <div class="tl-content">
+            <h3>Delivery &amp; Hook</h3>
+            <p>Email sent. Victim sees a convincing message, clicks the link, and lands on a pixel-perfect fake login page — or downloads a malicious attachment that executes silently.</p>
+            <div class="tl-tag">Email · SMS · Social Media · USB Drops</div>
+          </div>
+        </div>
+        <div class="tl-item reveal-left">
+          <div class="tl-dot">5</div>
+          <div class="tl-content">
+            <h3>Credential Harvest / Malware Install</h3>
+            <p>Victim enters credentials (captured immediately) or opens attachment (malware installs). Attacker may redirect to real site so victim suspects nothing while their data is stolen.</p>
+            <div class="tl-tag">Keyloggers · RATs · Ransomware · Credential Theft</div>
+          </div>
+        </div>
+        <div class="tl-item reveal-right">
+          <div class="tl-dot">6</div>
+          <div class="tl-content">
+            <h3>Exploitation &amp; Lateral Movement</h3>
+            <p>Stolen credentials used to access accounts, pivot inside the network, escalate privileges, exfiltrate data, or deploy ransomware. Average dwell time before detection: 207 days.</p>
+            <div class="tl-tag">Account Takeover · Ransomware · Data Exfiltration</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODULE 5: Defense ══════════════════ -->
+    <section class="module reveal" id="mod5">
+      <div class="section-label">Module 05</div>
+      <h2 class="section-title">Your Defense Playbook</h2>
+
+      <div class="defense-grid">
+        <div class="defense-card reveal-up" style="--delay:0s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🧠</div>
+          <h3>Think Before You Click</h3>
+          <p>Pause for 10 seconds before clicking any link or attachment. Ask: Was I expecting this? Does the sender make sense? Hover over links to preview the destination URL in your status bar.</p>
+          <div class="dc-tip">Pro tip: Type URLs directly into your browser instead of clicking links</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.1s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🔐</div>
+          <h3>Enable MFA Everywhere</h3>
+          <p>Multi-Factor Authentication stops 99.9% of account takeover attacks even when passwords are stolen. Use an authenticator app (not SMS when possible) for your most critical accounts.</p>
+          <div class="dc-tip">Priority: email, banking, work accounts, password manager</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.2s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">📞</div>
+          <h3>Verify Out-of-Band</h3>
+          <p>Never verify using contact info provided in the suspicious message itself. Call the person or company back using an official number from their real website or your contacts list.</p>
+          <div class="dc-tip">A 30-second phone call can prevent a $50,000 wire fraud</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.3s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🔑</div>
+          <h3>Use a Password Manager</h3>
+          <p>Password managers autofill only on the exact correct domain. If you're on a fake site, the autofill won't trigger — a built-in anti-phishing mechanism that also prevents credential reuse.</p>
+          <div class="dc-tip">Recommended: Bitwarden, 1Password, or your browser's built-in manager</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.4s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🛡️</div>
+          <h3>Keep Software Updated</h3>
+          <p>Phishing attachments exploit known vulnerabilities in Office, PDF readers, and browsers. Keeping software patched closes these doors. Enable auto-updates where possible.</p>
+          <div class="dc-tip">OS, browser, Office suite, and PDF reader are top priorities</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.5s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🚨</div>
+          <h3>Report &amp; Don't Delete</h3>
+          <p>Report phishing via your email client's built-in button or forward to your security team. Don't just delete — reporting feeds spam filters, helps colleagues, and may trigger an incident response.</p>
+          <div class="dc-tip">US: report to phishing@apwg.org or reportphishing@antiphishing.org</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.6s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">📧</div>
+          <h3>Check Email Headers</h3>
+          <p>View "Show Original" or "View Source" to inspect SPF, DKIM, and DMARC authentication results. A failed SPF check on a "trusted" sender is a hard red flag.</p>
+          <div class="dc-tip">Look for: SPF=pass, DKIM=pass, DMARC=pass — all three should align</div>
+        </div>
+        <div class="defense-card reveal-up" style="--delay:0.7s">
+          <div class="dc-glow"></div>
+          <div class="dc-icon">🧩</div>
+          <h3>Security Awareness Culture</h3>
+          <p>Share phishing examples with your team. Run simulated phishing tests. Create a culture where it's safe to report mistakes without fear. One trained employee can save the whole organization.</p>
+          <div class="dc-tip">Organizations with training reduce click-through rates by up to 72%</div>
+        </div>
+      </div>
+
+      <!-- What to do if you got phished -->
+      <div class="incident-box reveal">
+        <h3>🆘 If You Think You've Been Phished — Act Fast</h3>
+        <div class="incident-steps">
+          <div class="is-step"><span>1</span> Disconnect from the network immediately</div>
+          <div class="is-step"><span>2</span> Change all compromised passwords from a clean device</div>
+          <div class="is-step"><span>3</span> Enable MFA on affected accounts right now</div>
+          <div class="is-step"><span>4</span> Report to your IT/security team within minutes</div>
+          <div class="is-step"><span>5</span> Run a full malware scan on the affected device</div>
+          <div class="is-step"><span>6</span> Monitor accounts for unauthorized activity for 30 days</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════ MODULE 6: Quiz ══════════════════ -->
+    <section class="module mod-dark reveal" id="mod6">
+      <div class="section-label">Module 06</div>
+      <h2 class="section-title light">Knowledge Check</h2>
+      <p class="section-intro light-text">10 questions covering all modules. You need 70% to pass. Good luck.</p>
+
+      <!-- Name input -->
+      <div class="name-input-wrap" id="nameWrap">
+        <label class="name-label" for="quizName">Your Name</label>
+        <input
+          type="text"
+          id="quizName"
+          class="name-input"
+          placeholder="Enter your name before starting..."
+          maxlength="60"
+          autocomplete="off"
+        />
+      </div>
+
+      <div id="quiz-container"></div>
+      <div id="quiz-result" class="quiz-result hidden"></div>
+      <div class="quiz-actions">
+        <button class="btn-quiz" id="submitQuiz" onclick="submitQuiz()">
+          <span>Submit Answers</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+        <button class="btn-quiz-outline hidden" id="retakeQuiz" onclick="retakeQuiz()">↺ Retake Quiz</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo">🔒 PhishGuard</div>
+      <p>Stay skeptical. Stay secure. When in doubt — don't click.</p>
+      <div class="footer-links">
+        <a href="https://www.cisa.gov/phishing" target="_blank" rel="noopener">CISA Phishing Resources</a>
+        <a href="https://apwg.org" target="_blank" rel="noopener">APWG</a>
+        <a href="https://haveibeenpwned.com" target="_blank" rel="noopener">Check if You've Been Breached</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
